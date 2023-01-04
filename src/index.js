@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ToUpperCase from './ClickEvent/FormByFunc.js';
 // import BlogCompo from './Blog.js';
-import FormCompo from './ClickEvent/Formuser.js';
+import FormCompo from './ClickEvent/onClickEvent.js';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
