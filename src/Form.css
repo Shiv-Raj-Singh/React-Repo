@@ -1,0 +1,14 @@
+.userform{
+    border: 2px solid black;
+    width: 50vw;
+    margin: 10vh auto;
+}
+
+.txtarea{
+    width: 90%;
+    height: 90%;
+    /* margin: auto; */
+    background-color: silver;
+    font-size: larger;
+    padding: auto;
+}
