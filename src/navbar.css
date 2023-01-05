@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: scroll; */
+}
+body{
+    background-color: lightgreen;
+}
+.navHeader{
+    /* border: 2px solid black; */
+    display: flex;
+    width: 99vw;
+    height: 9vh;
+    background-color: aqua;
+    justify-content : space-between ;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    display : flex;
+    justify-content : space-around ;
+    align-items: center;
+}
+
+.ul-links{
+    /* border: 1px solid yellow; */
+    width: 40%;
+    display : flex;
+    justify-content : space-between ;
+    list-style: none;
+}
+.searchbar{
+    /* border : 2px rgb(10, 7, 8) solid ; */
+    margin-right: 20%;
+    display: flex;
+    align-items: center;
+    /* justify-content : space-between ; */
+    width: 20%;
+}
+.searchbar input{
+    position: relative;
+    height: 5vh;
+    /* margin: 10% 0% 0  0; */
+}
+.btn{
+    margin-left: 5%;
+    background-color: rgb(192, 192, 192);
+    color: blue;
+}
+.logo h3{
+    font-size: 1em;
+    background-color: lightgreen;
+    text-align: center;
+    margin-right: 3%;
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 40%;
+}
+
+.logo{
+    margin-left:1% ;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo h3:hover{
+    color: rgb(14, 2, 2);
+    background-color: rgb(26, 235, 19);
+    width: 35%;
+    font-size: 150%;
+    /* margin-bottom: 5%; */
+}
+
+a{
+    text-decoration : none ;
+    color : black;
+
+}
+.link :hover{
+    text-decoration : unset ;
+    color : rgb(243, 13, 13);
+    border-radius: 60%;
+}
+marquee{
+    font-size: 130%;
+    color: rgb(230, 4, 4);
+    background-color: rgba(56, 231, 79, 0.384);
+    text-decoration: solid;
+    font-style: italic;
+}

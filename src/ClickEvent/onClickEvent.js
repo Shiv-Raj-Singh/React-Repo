@@ -43,9 +43,10 @@ export default class FormCompo extends React.Component{
         alert("You Want Count All Text Words !")
         const words = this.state.text.trim().split(' ')
         console.log(words)
+        let countwords = words.length
+        countwords= (words.length===1 && words[0]==="") ? 0 :countwords
         this.setState({
-            // countwords:this.state.text.endsWith(' ' || "  " || "   " || "     ")?words.length-1 : words.length
-            countwords:words.length
+            countwords: countwords
              })
     }
 
@@ -53,13 +54,14 @@ export default class FormCompo extends React.Component{
         console.log("clicked") 
         alert("You Want See the Read Time For Text in Seconds!")
         const words = this.state.text.trim().split(' ')
+        let readTime = words.length * (.32)
+        readTime= (words.length===1 && words[0]==="") ? 0 :readTime
         this.setState({
-            // countwords:this.state.text.endsWith(' ' || "  " || "   " || "     ")?words.length-1 : words.length
-            readTime: words.length * (.32) 
+            readTime: readTime + " seconds !"
              })
     }
 
-
+  
 render(){
     return <div>
     <div className="userform">
@@ -70,17 +72,19 @@ render(){
             })
         }} className='txtarea' id="" cols="30" rows="10"></textarea> */}
         <textarea name="textarea" onChange = {this.onChangeData} className='txtarea' id="" cols="30" rows="10"></textarea>
-        <button className="btn" onClick={this.onClickDataToUpper}> To Upper-Case </button>
-        <button className="btn" onClick={this.onClickDataToLower}> To Lower-Case </button>
-        <button className="btn" onClick={this.onClickDataToCountCharactor}> To Count-Charactors </button>
-        <button className="btn" onClick={this.onClickDataToCountwords}> To Count-Wors  </button>
-        <button className="btn" onClick={this.onClickDataToChechReadTime}> To Read Aprox Time  </button>
-
+        <button className="btns" onClick={this.onClickDataToUpper}> To Upper-Case </button>
+        <button className="btns" onClick={this.onClickDataToLower}> To Lower-Case </button>
+        <button className="btns" onClick={this.onClickDataToCountCharactor}> To Count-Charactors </button>
+        <button className="btns" onClick={this.onClickDataToCountwords}> To Count-Wors  </button>
+        <button className="btns" onClick={this.onClickDataToChechReadTime}> To Read Aprox Time  </button>
+        <div className="text-p">
         <p className='txtarea-p'>{this.state.upperText}</p>
         <p className='txtarea-p'>{this.state.lowerText}</p>
         <p className='txtarea-p'>{this.state.countCharactor}</p>
-        <p className='txtarea-p'>{this.state.countwords}</p>
+        <p className='txtarea-p'>{this.state.countwords} </p>
         <p className='txtarea-p'>{this.state.readTime} </p>
+        </div>
+ 
     </div>
     </div>
  }   
